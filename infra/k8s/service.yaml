@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: elegant-heyrovsky-c511e3493a-srv
+  namespace: apps-release
+spec:
+  selector:
+    app: elegant-heyrovsky-c511e3493a
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 7070
+  type: ClusterIP
